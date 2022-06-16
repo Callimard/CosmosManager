@@ -51,6 +51,9 @@ public class User {
     @Column(name = "creationDate", nullable = false)
     private Instant creationDate;
 
+    @Column(name = "verified", nullable = false)
+    private Boolean verified;
+
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "UserRoles",
             joinColumns = @JoinColumn(name = "idUser"),
